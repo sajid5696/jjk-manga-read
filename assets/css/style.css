@@ -1,0 +1,157 @@
+/* Base palette uses warm earth tones to avoid blue and purple */
+:root {
+    --background: #f6f0e3;
+    --surface: #fdfaf3;
+    --text-primary: #2f281e;
+    --text-secondary: #5b4a33;
+    --accent: #cf6f35;
+    --accent-dark: #9b4d1c;
+    --border: #e0d2ba;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: "Libre Baskerville", "Palatino Linotype", serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--accent-dark);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+header {
+    background: var(--surface);
+    border-bottom: 2px solid var(--border);
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    background: var(--surface);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(70, 52, 29, 0.08);
+}
+
+section h2,
+section h3,
+section h4 {
+    color: var(--accent);
+    margin-top: 0;
+}
+
+blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    background: rgba(207, 111, 53, 0.08);
+}
+
+.faqs details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.faqs details[open] {
+    border-color: var(--accent);
+}
+
+.faqs summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--accent-dark);
+}
+
+.author-bio {
+    background: #efe3cf;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+.author-bio h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+footer {
+    background: var(--surface);
+    border-top: 2px solid var(--border);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.meta-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: rgba(207, 111, 53, 0.08);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.meta-box div {
+    flex: 1 1 240px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
